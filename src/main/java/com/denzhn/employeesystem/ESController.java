@@ -124,6 +124,10 @@ public class ESController {
             employeeDto.setSalary(Double.parseDouble(updateSalaryField.getText()));
             if (service.update(employeeDto)){
                 updateErrorTextArea.setText(EMPTY);
+                updateIdField.setText(EMPTY);
+                updateNameField.setText(EMPTY);
+                updateAgeField.setText(EMPTY);
+                updateSalaryField.setText(EMPTY);
                 updateOperationStatus.setTextFill(Color.GREEN);
                 updateOperationStatus.setText(SUCCESS);
             }
